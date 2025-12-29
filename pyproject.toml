@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "wedding-invite"
+version = "0.1.0"
+description = "This is a small project for a web wedding-invite made using Flask and poetry to handle venv"
+authors = ["Julio Conchas <conchasjimene@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+flask = "^3.1.2"
+waitress = "^3.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
