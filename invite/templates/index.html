@@ -1,132 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Wedding</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Julio & Claudia – Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap v5 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+    <meta property="og:title" content="Julio & Claudia Wedding">
+    <meta property="og:description" content="Join us to celebrate our wedding day">
+    <meta property="og:image" content="https://your-site.com/preview.jpg">
+    <meta property="og:type" content="website"> 
 
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #f8f9fa;
-    }
+    <!-- Bootstrap v5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/musicplayer.css') }}" rel="stylesheet">
 
-    .hero {
-      background: linear-gradient(
-          rgba(0, 0, 0, 0.4),
-          rgba(0, 0, 0, 0.4)
-        ),
-        url('https://images.unsplash.com/photo-1520857014576-2c4f4c972b57')
-        center / cover no-repeat;
-      color: white;
-      min-height: 100vh;
-    }
+    <!-- google fonds -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Imperial+Script&family=Meddon&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
 
-    .hero h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
-
-    .section-title {
-      letter-spacing: 1px;
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- HERO / INVITATION HEADER -->
-  <section class="hero d-flex align-items-center text-center">
-    <div class="container">
-      <p class="fs-5 mb-2">You are joyfully invited to celebrate</p>
-      <h1 class="fw-bold mb-3">Julio & Claudia</h1>
-      <p class="fs-4">Our Wedding Day</p>
-      <p class="fs-5 mt-3">Saturday · November 14, 2026</p>
-    </div>
-  </section>
+    <audio id="bg-music" loop>
+      <source src="{{ url_for('static', filename='mp3/c&j.mp3') }}" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
 
-  <!-- DETAILS SECTION -->
-  <section class="py-5 bg-white">
-    <div class="container">
-      <div class="row text-center mb-4">
-        <div class="col">
-          <h2 class="section-title">Wedding Details</h2>
-          <p class="text-muted">We can’t wait to celebrate with you</p>
-        </div>
-      </div>
-
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <h5>📍 Location</h5>
-          <p>
-            Beautiful Garden Venue<br>
-            Mexico City
-          </p>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <h5>🕒 Time</h5>
-          <p>
-            Ceremony: 4:00 PM<br>
-            Reception: 6:00 PM
-          </p>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <h5>👔 Dress Code</h5>
-          <p>
-            Formal / Elegant
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RSVP SECTION -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-6">
-          <h2 class="section-title mb-3">RSVP</h2>
-          <p class="mb-4">Please let us know if you’ll be joining us</p>
-
-          <form>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container position-relative">
+            <!-- bg div -->
+            <div id="bg-pannel" class="position-absolute d-flex pt-5">
+                <div class="panel left m-2"></div>
+                <div class="row justify-content-center">
+                    <div class="row text-center display-3 text-dark justify-content-center">
+                        <div class="col-3 pe-0 ">
+                            <p class="cj-seal">C</p>
+                        </div>
+                        <div class="col-3 ps-0 pt-3">
+                            <p class="cj-seal">J</p>
+                        </div>
+                        
+                    </div>
+                    <div class="row mt-4">
+                        <div class="panel center"></div>
+                    </div>
+                </div>
+                <div class="panel right m-2"></div>
             </div>
+            <!-- text div ->
+            <div id="txt-pannel" class="position-absolute align-items-center text-center p-5">
+                <p class="fs-5">NOS CASAMOS</p>
+                <h1 class="fw-bold display-4">Claudia & Julio</h1>
+                <p class="fs-5 mt-3">Saturday · November 14, 2026</p>
 
-            <div class="mb-3">
-              <select class="form-select">
+                <!- countdown ->
+                <div class="mt-4">
+                    <div class="row justify-content-center text-white">
+                        <div class="col-3 col-md-2">
+                            <h2 id="days">00</h2>
+                            <small>Days</small>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <h2 id="hours">00</h2>
+                            <small>Hours</small>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <h2 id="minutes">00</h2>
+                            <small>Minutes</small>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <h2 id="seconds">00</h2>
+                            <small>Seconds</small>
+                        </div>
+                    </div>
+                    <button id="music-btn" class="btn btn-outline-light rounded-circle mt-4">
+                    ▶
+                    </button>
+                </div>
+
+            </div>
+            -->
+        </div>
+    </section>
+
+<!-- DETAILS -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Wedding Details</h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>📍 Location</h5>
+        <p>Akacia<br>Agua Prieta 100, El Campanario, 45235 Zapopan, Jal.</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5>🕒 Schedule</h5>
+        <p>Ceremony: 4:00 PM<br>Reception: 6:00 PM</p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5>👗 Dress Code</h5>
+        <p>Rustic Elegant</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Our Story</h2>
+
+    <div class="row gallery g-3">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/jc0.jpeg') }}" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/jc1.jpeg') }}" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/jc2.jpeg') }}" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/jc3.JPG') }}" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">How to Get There</h2>
+
+    <div class="ratio ratio-16x9">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.74054524117!2d-103.43711362397153!3d20.598650580945282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ac918c869d69%3A0x617d6a9ffc0b0d63!2sAKACIA%20Terraza!5e0!3m2!1ses!2smx!4v1767034085791!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- RSVP -->
+    <section class="py-5">
+      <div class="container text-center">
+        <h2 class="section-title mb-4">RSVP</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <form>
+              <input type="text" class="form-control mb-3" placeholder="Your Name">
+              <select class="form-select mb-3">
                 <option selected>Will you attend?</option>
                 <option>Yes, gladly!</option>
                 <option>Sadly, no</option>
               </select>
-            </div>
-
-            <button class="btn btn-dark w-100">
-              Send RSVP
-            </button>
-          </form>
+              <button class="btn btn-rustic w-100">Send RSVP</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="py-4 text-center bg-dark text-white">
-    <p class="mb-0">
-      With love ❤️ Julio & Claudia
-    </p>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="py-4 text-center">
+        <p class="mb-0">With love 🤎 Julio & Claudia</p>
+        <p class="mb-0">www.iconito.io.com</p>
+    </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/countdown.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/music.js') }}"></script>
 </body>
 </html>

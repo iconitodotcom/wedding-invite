@@ -1,0 +1,87 @@
+:root {
+    --rustic-bg: #f4efe9;
+    --rustic-green: #6b705c;
+    --rustic-brown: #8d6e63;
+    --rustic-accent: #cb997e;
+    --rustic-dark: #3a2f28;
+  }
+
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--rustic-bg);
+    color: var(--rustic-dark);
+  }
+
+  .hero {
+    min-height: 100vh;
+    color: white;
+  }
+
+  .section-title {
+    color: var(--rustic-green);
+    letter-spacing: 1px;
+  }
+
+  .btn-rustic {
+    background-color: var(--rustic-green);
+    color: white;
+    border: none;
+  }
+
+  .btn-rustic:hover {
+    background-color: var(--rustic-brown);
+  }
+
+  .gallery img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  footer {
+    background-color: var(--rustic-dark);
+    color: white;
+  }
+
+  /* Panels */
+.panel {
+    min-width: 15vw;
+    min-height: 80vh;
+    flex: 1;
+    background-image: url("../img/jc0.jpeg");
+    background-size: 300% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: reveal 1.2s ease forwards;
+    
+  }
+
+  /* Background alignment */
+.panel.left {
+    background-position: 0% center;
+    animation-delay: 0s;
+  }
+  
+  .panel.center {
+    background-position: 50% center;
+    animation-delay: 0.15s;
+  }
+  
+  .panel.right {
+    background-position: 100% center;
+    animation-delay: 0.3s;
+  }
+  #bg-pannel{ left: 20%; }
+  #txt-pannel{
+    left:50%;
+    top: 50%;
+  }
+  .cj-seal{
+    font-family: "Imperial Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
