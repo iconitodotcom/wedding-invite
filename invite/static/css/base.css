@@ -48,8 +48,8 @@
 
   /* Panels */
 .panel {
-    min-width: 15vw;
-    min-height: 80vh;
+    min-width: 25vw;
+    min-height: 75vh;
     flex: 1;
     background-image: url("../img/jc0.jpeg");
     background-size: 300% 100%;
@@ -74,11 +74,17 @@
     background-position: 100% center;
     animation-delay: 0.3s;
   }
-  #bg-pannel{ left: 20%; }
-  #txt-pannel{
-    left:50%;
-    top: 50%;
-  }
+  #bg-pannel{ left: 3vw; }
+  #txt-pannel{ 
+    min-width: 80vw;
+    left: 8vw;
+    top: 43vh;
+ }
+ #date-pannel
+ {
+    top: 95vh;
+    left:34vw;
+ }
   .cj-seal{
     font-family: "Imperial Script", cursive;
     font-weight: 400;
