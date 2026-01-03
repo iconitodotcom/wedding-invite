@@ -55,39 +55,61 @@
     background-size: 300% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    animation: reveal 1.2s ease forwards;
+    animation: slideIn 2s ease-out forwards;
     
   }
+/*** Image splitt code -> ***/
+/* Background alignment */
+.panel.left { background-position: 0% center; }
 
-  /* Background alignment */
-.panel.left {
-    background-position: 0% center;
-    animation-delay: 0s;
+.panel.center { background-position: 50% center; }
+
+.panel.right { background-position: 100% center; }
+/*** Image splitt code <- ***/
+
+/*** Animation code -> ***/
+/* start positions */
+.panel-left { transform: translateY(15%); }
+.panel-center { transform: translateY(-15%); }
+.panel-right { transform: translateY(15%); }
+.txt-top { transform : translateX(-20%); } 
+.txt-bottom { transform : translateX(25%); } 
+/* stagger */
+.panel-left  { animation-delay: 0s; }
+.panel-center{ animation-delay: 0.15s; }
+.panel-right { animation-delay: 0s; }
+.txt-top { animation-delay: 0s; } 
+.txt-bottom { animation-delay: 0s;} 
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0) translateY(0);
   }
-  
-  .panel.center {
-    background-position: 50% center;
-    animation-delay: 0.15s;
+}
+@keyframes textSlideIn {
+    to {
+      transform: translateX(0) translateY(0);
+    }
   }
-  
-  .panel.right {
-    background-position: 100% center;
-    animation-delay: 0.3s;
-  }
-  #bg-pannel{ left: 3vw; }
-  #txt-pannel{ 
+
+.animation { animation: slideIn 2s ease-out forwards; }
+.txt-animation { animation: textSlideIn 2s ease-out forwards; }
+/*** Animation code -> ***/
+
+#bg-pannel{ left: 3vw; }
+#txt-pannel{ 
     min-width: 80vw;
     left: 8vw;
-    top: 43vh;
- }
- #date-pannel
- {
+    top: 37vh;
+}
+#date-pannel
+{
     top: 95vh;
     left:34vw;
- }
-  .cj-seal{
+}
+.cj-seal{
     font-family: "Imperial Script", cursive;
     font-weight: 400;
     font-style: normal;
-  }
+}
 

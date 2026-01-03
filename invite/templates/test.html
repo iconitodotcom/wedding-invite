@@ -84,10 +84,115 @@
   }
 }
 
-/*style overlap divs v1*/
+/*animation test*/
+
+.box-container {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  width: 120px;
+  height: 200px;
+  background-color: #c9a77d;
+  opacity: 0;
+  animation: fadeSlide 1s ease forwards;
+}
+
+/* staggered animation */
+.box-1 { animation-delay: 0s; }
+.box-2 { animation-delay: 0.2s; }
+.box-3 { animation-delay: 0.4s; }
+
+.box {
+  animation: scaleIn 0.8s ease forwards;
+}
+
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.panel {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* start positions */
+.panel-left {
+  /* transform: translateX(-100%); */
+  transform: translateY(-50%);
+}
+
+.panel-center {
+  transform: translateY(50%);
+}
+
+.panel-right {
+  /* transform: translateX(100%); */
+  transform: translateY(-50%);
+}
+
+/* stagger */
+.panel-left  { animation-delay: 0s; }
+.panel-center{ animation-delay: 0.15s; }
+.panel-right { animation-delay: 0.3s; }
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+
 
 
 </style>
+
+
+ <h1>Animation test</h1>
+ <div class="box-container">
+  <div class="box box-1"></div>
+  <div class="box box-2"></div>
+  <div class="box box-3"></div>
+</div>
+ <h1>Animation test position</h1>
+ <div class="hero">
+  <div class="panel panel-left"></div>
+  <div class="panel panel-center"></div>
+  <div class="panel panel-right"></div>
+</div>
+
+
+
+
+
+
 <!--
 <section class="hero-split">
   <div class="panel left"></div>
@@ -152,3 +257,5 @@
 
 
         </div>
+
+
