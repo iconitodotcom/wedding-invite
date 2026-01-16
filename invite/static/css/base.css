@@ -104,12 +104,23 @@
 }
 #date-pannel
 {
+    width: 100vw;
     top: 95vh;
-    left:34vw;
+    /*left:34vw;*/
+}
+#music-btn{
+    background-color: var(--rustic-bg);
 }
 .cj-seal{
     font-family: "Imperial Script", cursive;
     font-weight: 400;
     font-style: normal;
 }
+.numberFont{
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
 
