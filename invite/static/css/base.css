@@ -20,9 +20,9 @@ body {
     min-height: 100vh;
     color: white;
 }
-.height-100
+.height-90
 {
-    height: 100vh !important;
+    height: 90vh !important;
 }
 
   .section-title {
@@ -94,17 +94,40 @@ body {
     transform: translateX(0) translateY(0);
   }
 }
-@keyframes textSlideIn {
-    to {
-      transform: translateX(0) translateY(0);
+@keyframes textSlideIn 
+{
+    to
+    {
+        transform: translateX(0) translateY(0);
     }
-  }
+}
+@keyframes appearAndResize 
+{
+    0% {
+        opacity: 0;
+        font-size: 0.5rem;
+        letter-spacing: -5px;
+    }
+    100% {
+        opacity: 1;
+        font-size: 1rem;
+        letter-spacing: normal;
+    }
+}
 
 .animation { animation: slideIn 2s ease-out forwards; }
 .txt-animation { animation: textSlideIn 2s ease-out forwards; }
+.date-amimation 
+{
+     animation: appearAndResize 3s ease-out forwards;
+     opacity: 0; /* start hidden */
+}
 /*** Animation code -> ***/
 
-#bg-pannel{ left: 3vw; }
+#bg-pannel
+{
+     /* left: 3vw;  */
+}
 #txt-pannel{ 
     min-width: 80vw;
     left: 8vw;
@@ -113,7 +136,7 @@ body {
 #date-pannel
 {
     /* width: 100vw; */
-    top: 95vh;
+    /* top: 95vh; */
     /*left:34vw;*/
 }
 #music-btn{
@@ -126,9 +149,9 @@ body {
 }
 .numberFont{
     font-family: "Cormorant", serif;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto;
     font-weight: 300;
-    font-style: normal;
+    font-style: normal; */
 }
 
 
