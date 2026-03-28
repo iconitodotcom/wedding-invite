@@ -147,11 +147,61 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-.numberFont{
+.numberFont
+{
     font-family: "Cormorant", serif;
-    /* font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal; */
+}
+.bodoni-moda-sc-txt 
+{
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/*countdown style*/
+@keyframes fadeUp
+{
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
+.countdown 
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin: 2.8rem 0 2rem;
+    animation: fadeUp 1.4s 0.55s cubic-bezier(0.22,1,0.36,1) both;
+}
+.unit 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+.unit-value 
+{
+    /* font-family: 'Cinzel', serif; */
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 600;
+    color: var(--rustic-green);
+    line-height: 1;
+    min-width: 2ch;
+    position: relative;
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+}
+.unit-value.tick 
+{
+    transform: scale(1.18);
+    color: var(--rustic-accent);
+}
+
+.unit-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    /* color: var(--rustic-green); */
+}
 
