@@ -7,6 +7,15 @@
     --rustic-dark: #3a2f28;
     /*Weading current color palet */
     --weading-bg: #FFFFF0;
+    --hero-img: url("https://wedding-invite-jc.t3.tigrisfiles.io/cj_hero_3.jpg");
+
+    /*Hero pannel image*/
+    --panel-size: 400% 100%;   /* 300% = 3 panels wide, adjust if image crops oddly */
+    --v-pos: 20%;
+    --left-pos: 30%;
+    --center-pos: 67%;
+    --right-pos: 101%;
+    
 }
 
 body {
@@ -59,20 +68,20 @@ body {
     min-width: 25vw;
     min-height: 75vh;
     flex: 1;
-    background-image: url("../img/jc0.jpeg");
-    background-size: 300% 100%;
-    background-position: center;
+    background-image: var(--hero-img);
+    background-size: var(--panel-size);
     background-repeat: no-repeat;
-    animation: slideIn 2s ease-out forwards;
-    
+    animation: slideANDfadeIn 2s ease-out forwards;
   }
 /*** Image splitt code -> ***/
+
 /* Background alignment */
-.panel.left { background-position: 0% center; }
+.panel.left { background-position: var(--left-pos) var(--v-pos); }
 
-.panel.center { background-position: 50% center; }
+.panel.center { background-position: var(--center-pos) var(--v-pos); }
 
-.panel.right { background-position: 100% center; }
+.panel.right { background-position: var(--right-pos) var(--v-pos); }
+
 /*** Image splitt code <- ***/
 
 /*** Animation code -> ***/
@@ -89,10 +98,13 @@ body {
 .txt-top { animation-delay: 0s; } 
 .txt-bottom { animation-delay: 0s;} 
 
-@keyframes slideIn {
-  to {
-    transform: translateX(0) translateY(0);
-  }
+@keyframes slideANDfadeIn 
+{
+    from { opacity: 0; }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
 }
 @keyframes textSlideIn 
 {
@@ -115,7 +127,7 @@ body {
     }
 }
 
-.animation { animation: slideIn 2s ease-out forwards; }
+.animation { animation: slideANDfadeIn 2s ease-out forwards; }
 .txt-animation { animation: textSlideIn 2s ease-out forwards; }
 .date-amimation 
 {

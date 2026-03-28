@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Julio & Claudia – Wedding</title>
+    <title>Claudia & Julio – Wedding</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:title" content="Julio & Claudia Wedding">
@@ -15,11 +15,17 @@
     <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/musicplayer.css') }}" rel="stylesheet">
 
+    <!-- Tab icons -->
+    <link rel="icon" href="{{ url_for('static', filename='img/icon/favicon-32x32.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/icon/favicon-16x16.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/icon/apple-touch-icon.png') }}">
+
     <!-- google fonds -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Imperial+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Imperial+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,8 +40,11 @@
         <div class="container position-relative height-90 mb-3">
             <!-- background div -->
             <div id="bg-pannel" class="d-flex pt-2 height-90">
+                <!-- img panel to the left -->
                 <div class="panel left m-2 mb-3 panel-left"></div>
+                <!-- panel center -->
                 <div class="row justify-content-center panel-center animation">
+                    <!-- text panel center top -->
                     <div class="row text-center display-2 text-dark justify-content-center">
                         <div class="col-3 pe-0 ">
                             <p class="cj-seal">C</p>
@@ -45,10 +54,12 @@
                         </div>
                         
                     </div>
+                    <!-- img panel center bottom-->
                     <div class="row pt-2">
                         <div class="panel center"></div>
                     </div>
                 </div>
+                <!-- img panel to the right -->
                 <div class="panel right m-2 mb-3 panel-right"></div>
             </div>
         </div>
