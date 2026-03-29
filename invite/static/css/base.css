@@ -7,7 +7,7 @@
     --rustic-dark: #3a2f28;
     /*Weading current color palet */
     --weading-bg: #FFFFF0;
-    --hero-img: url("https://wedding-invite-jc.t3.tigrisfiles.io/cj_hero_3.jpg");
+    /* --hero-img: url('{{ MEDIA_URL }}/img/cj_hero_3.jpg'); */
 
     /*Hero pannel image*/
     --panel-size: 400% 100%;   /* 300% = 3 panels wide, adjust if image crops oddly */
@@ -15,7 +15,6 @@
     --left-pos: 30%;
     --center-pos: 67%;
     --right-pos: 101%;
-    
 }
 
 body {
