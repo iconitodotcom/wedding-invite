@@ -10,11 +10,11 @@
     /* --hero-img: url('{{ MEDIA_URL }}/img/cj_hero_3.jpg'); */
 
     /*Hero pannel image*/
-    --panel-size: 400% 100%;   /* 300% = 3 panels wide, adjust if image crops oddly */
+    --panel-size: 300% 100%;   /* 300% = 3 panels wide, adjust if image crops oddly */
     --v-pos: 20%;
-    --left-pos: 30%;
-    --center-pos: 67%;
-    --right-pos: 101%;
+    --left-pos: 1%;
+    --center-pos: 51%;
+    --right-pos: 103%;
 }
 
 body {
