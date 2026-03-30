@@ -5,6 +5,7 @@ description = "This is a small project for a web wedding-invite made using Flask
 authors = ["Julio Conchas <conchasjimene@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.13"
