@@ -25,12 +25,12 @@ body {
 }
 
 .hero {
-    min-height: 100vh;
+    min-height: 100dvh;
     color: white;
 }
 .height-90
 {
-    height: 90vh !important;
+    height: 90dvh !important;
 }
 
   .section-title {
@@ -65,7 +65,7 @@ body {
   /* Panels */
 .panel {
     min-width: 25vw;
-    min-height: 75vh;
+    min-height: 75dvh;
     flex: 1;
     background-image: var(--hero-img);
     background-size: var(--panel-size);
