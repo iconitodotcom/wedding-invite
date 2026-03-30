@@ -1,6 +1,7 @@
 # fly.toml
 app = 'claudia-and-julio-weddinginvite'
-primary_region = 'gdl'     # Guadalajara region ✏️
+#primary_region = 'gdl'     # Guadalajara region ✏️ deprecated
+primary_region = 'dfw'      # dallas forth worth?
 
 [build] # ← this alone is enough to use your Dockerfile
 
