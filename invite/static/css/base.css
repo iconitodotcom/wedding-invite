@@ -25,7 +25,8 @@ body {
 }
 
 .hero {
-    min-height: 100svh; /* small  — locks to viewport WITH toolbars visible (smallest) */
+    /*min-height: 100svh;*/ /* small  — locks to viewport WITH toolbars visible (smallest) */
+    min-height: 90svh; /* small  — locks to viewport WITH toolbars visible (smallest) */
     color: white;
 }
 .height-90
@@ -165,6 +166,7 @@ body {
 .numberFont
 {
     font-family: "Cormorant", serif;
+    font-weight: 400;
 }
 .bodoni-moda-sc-txt 
 {
