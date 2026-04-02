@@ -1,20 +1,24 @@
 :root 
 {
     --rustic-bg: #f4efe9;
+    /* --rustic-bg: #2e4a2b; */
     --rustic-green: #6b705c;
     --rustic-brown: #8d6e63;
     --rustic-accent: #cb997e;
     --rustic-dark: #3a2f28;
-    /*Weading current color palet */
-    --weading-bg: #FFFFF0;
-    /* --hero-img: url('{{ MEDIA_URL }}/img/cj_hero_3.jpg'); */
+    
+    /*colors*/
+    --weading-bg: #1c2e1a;
+    --ivory: #faf6ec;
+    --golden: #c9a84c;
+
 
     /*Hero pannel image*/
-    --panel-size: 400% 100%;   /* 300% = 3 panels wide, adjust if image crops oddly */
-    --v-pos: 20%;
-    --left-pos: 36%;
-    --center-pos: 68%;
-    --right-pos: 101%;
+    --panel-size: 300% 130%;   /* 300% = 3 panels wide, adjust if image crops oddly */
+    --v-pos: 83%;
+    --left-pos: 1%;
+    --center-pos: 47%;
+    --right-pos: 98%;
 }
 
 body {
@@ -23,45 +27,52 @@ body {
     background-color: var(--weading-bg);
     color: var(--rustic-dark);
 }
-
+.ivory-txt
+{
+    color: var(--ivory);
+}
+.gold-txt
+{
+    color: var(--golden);
+}
 .hero {
     /*min-height: 100svh;*/ /* small  — locks to viewport WITH toolbars visible (smallest) */
-    min-height: 90svh; /* small  — locks to viewport WITH toolbars visible (smallest) */
+    min-height: 10svh; /* small  — locks to viewport WITH toolbars visible (smallest) */
     color: white;
 }
 .height-90
 {
-    height: 90svh !important; /* small  — locks to viewport WITH toolbars visible (smallest) */
+    height: 100svh !important; /* small  — locks to viewport WITH toolbars visible (smallest) */
 }
 
-  .section-title {
+.section-title {
     color: var(--rustic-green);
     letter-spacing: 1px;
-  }
+}
 
-  .btn-rustic {
+.btn-rustic {
     background-color: var(--rustic-green);
     color: white;
     border: none;
-  }
+}
 
-  .btn-rustic:hover {
+.btn-rustic:hover {
     background-color: var(--rustic-brown);
-  }
+}
 
-  .gallery img {
+.gallery img {
     border-radius: 8px;
     transition: transform 0.3s ease;
-  }
+}
 
-  .gallery img:hover {
+.gallery img:hover {
     transform: scale(1.05);
-  }
+}
 
-  footer {
+footer {
     background-color: var(--rustic-dark);
     color: white;
-  }
+}
 
   /* Panels */
 .panel {
@@ -141,8 +152,9 @@ body {
      /* left: 3vw;  */
 }
 #txt-pannel{ 
-    min-width: 80vw;
-    left: 8vw;
+    width: 100%;
+    /* min-width: 80vw;
+    left: 8vw; */
     top: 37vh;
 }
 #date-pannel
