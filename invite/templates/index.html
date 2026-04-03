@@ -120,65 +120,18 @@
 <!-- VENUES -->
 {% include "venues.html" %}
 
-
-<!-- DETAILS -->
-<section class="py-5 bg-white">
-  <div class="container text-center">
-    <h2 class="section-title mb-4">Wedding Details</h2>
-
-    <div class="row">
-      <div class="col-md-4 mb-3">
-        <h5>📍 Location</h5>
-        <p>Akacia<br>Agua Prieta 100, El Campanario, 45235 Zapopan, Jal.</p>
-      </div>
-
-      <div class="col-md-4 mb-3">
-        <h5>🕒 Schedule</h5>
-        <p>Ceremony: 4:00 PM<br>Reception: 6:00 PM</p>
-      </div>
-
-      <div class="col-md-4 mb-3">
-        <h5>👗 Dress Code</h5>
-        <p>Rustic Elegant</p>
-      </div>
+<!-- IMAGE -->
+<section class="overflow-hidden">
+  <div class="text-center">
+    <div class="mx-auto">
+      <img 
+        src="{{ MEDIA_URL }}/img/cj_venues.jpg" 
+        class="img-fluid fancy-image"
+        alt="sample image"
+      >
     </div>
   </div>
 </section>
-
-<!-- GALLERY -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center mb-4">Our Story</h2>
-
-    <div class="row gallery g-3">
-      <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/jc0.jpeg') }}" class="img-fluid">
-      </div>
-      <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/jc1.jpeg') }}" class="img-fluid">
-      </div>
-      <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/jc2.jpeg') }}" class="img-fluid">
-      </div>
-      <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/jc3.JPG') }}" class="img-fluid">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MAP -->
-<section class="py-5 bg-white">
-    <div class="container text-center">
-    <h2 class="section-title mb-4">How to Get There</h2>
-
-    <div class="ratio ratio-16x9">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.74054524117!2d-103.43711362397153!3d20.598650580945282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ac918c869d69%3A0x617d6a9ffc0b0d63!2sAKACIA%20Terraza!5e0!3m2!1ses!2smx!4v1767034085791!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    </div>
-</section>
-
-
 
 <!-- RSVP -->
 <section class="py-5">

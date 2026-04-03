@@ -1,0 +1,28 @@
+
+/* venues image */
+
+/* Initial state */
+.fancy-image
+{
+    transform: transtaleX(-120%);
+    opacity: 0;
+    /* transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease; */
+}
+.fancy-image.fshow {
+    animation: slideOvershoot 2s ease forwards;
+}
+  
+@keyframes slideOvershoot {
+    0% {
+      transform: translateX(-120%);
+      opacity: 0;
+    }
+    70% {
+      transform: translateX(8%); /* overshoot to the right */
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0); /* settle */
+      opacity: 1;
+    }
+}
