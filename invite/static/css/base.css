@@ -14,11 +14,11 @@
 
 
     /*Hero pannel image*/
-    --panel-size: 300% 130%;   /* 300% = 3 panels wide, adjust if image crops oddly */
-    --v-pos: 83%;
+    --panel-size: 310% 130%;   /* 300% = 3 panels wide, adjust if image crops oddly */
+    --v-pos: 88%;
     --left-pos: 1%;
-    --center-pos: 47%;
-    --right-pos: 98%;
+    --center-pos: 45%;
+    --right-pos: 96%;
 }
 
 body {
@@ -34,6 +34,10 @@ body {
 .gold-txt
 {
     color: var(--golden);
+}
+.bg-ivory
+{
+    background-color: var(--ivory);
 }
 .hero {
     /*min-height: 100svh;*/ /* small  — locks to viewport WITH toolbars visible (smallest) */
