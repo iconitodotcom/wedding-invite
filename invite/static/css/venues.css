@@ -1,0 +1,83 @@
+.venue-card {
+    padding: 2.5rem 2rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.venue-card:hover {
+    border-color: var(--golden);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.venue-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--golden);
+}
+
+.venue-heading::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--golden);
+    margin: 10px auto 0;
+} 
+
+.venue-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.venue-address {
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.venue-time {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.venue-btn {
+    border: 1px solid var(--golden);
+    color: var(--golden);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding: 6px 18px;
+    border-radius: 30px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.venue-btn:hover {
+    background: var(--golden);
+    color: #fff;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+  
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icon-svg {
+    width: 42px;
+    height: 42px;
+    color: #C6A96B; /* your gold */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.2; /* thinner = more elegant */
+    opacity: 0.9;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+  
+.venue-card:hover .icon-svg {
+    transform: translateY(-4px) scale(1.05);
+}
