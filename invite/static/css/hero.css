@@ -1,0 +1,5 @@
+.hero {
+    min-height: 100svh; /* small  — locks to viewport WITH toolbars visible (smallest) */
+   /* min-height: 93svh; /* small  — locks to viewport WITH toolbars visible (smallest) */
+    color: white;
+}

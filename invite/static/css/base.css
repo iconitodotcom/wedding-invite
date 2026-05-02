@@ -39,14 +39,10 @@ body {
 {
     background-color: var(--ivory);
 }
-.hero {
-    /*min-height: 100svh;*/ /* small  — locks to viewport WITH toolbars visible (smallest) */
-    min-height: 10svh; /* small  — locks to viewport WITH toolbars visible (smallest) */
-    color: white;
-}
-.height-90
+
+.height-80
 {
-    height: 100svh !important; /* small  — locks to viewport WITH toolbars visible (smallest) */
+    height: 80svh !important; /* small  — locks to viewport WITH toolbars visible (smallest) */
 }
 
 .section-title {
