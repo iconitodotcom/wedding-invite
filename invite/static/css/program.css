@@ -1,0 +1,45 @@
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    bottom: 12px;
+    width: 1px;
+    background: var(--golden);
+  }
+.tl-item {
+    position: relative;
+    padding-bottom: 2.8rem;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .65s ease, transform .65s ease;
+}
+.tl-item.visible-item { opacity: 1; transform: translateY(0); }
+.tl-sub {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.65;
+  }
+.tl-icon {
+    position: absolute;
+    left: -64px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid var(--golden);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .3s, background .3s;
+}
+.tl-icon svg { width: 22px; height: 22px; }
+.tl-time {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--golden);
+    margin-bottom: 3px;
+}
+
+ 
