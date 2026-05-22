@@ -8,10 +8,11 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.target.classList.contains('fade-in')) { entry.target.classList.add('show') }
         if (entry.target.classList.contains('fancy-image')) { entry.target.classList.add('fshow') }
         if (entry.target.classList.contains('tl-item')) { entry.target.classList.add('visible-item')}
+        if (entry.target.classList.contains('zoom-image')) { entry.target.classList.add('go-zoom')}
         //entry.target.classList.add('animate');
         observer.unobserve(entry.target);  // only animate once
       }
     });
   }, { threshold: 0.3 });  // trigger when 30% visible
   
-  document.querySelectorAll('.typewriter, .reveal-line, .reveal-right, .reveal-left, .curtain-wrapper, .fade-in, .fancy-image, .tl-item').forEach(el => observer.observe(el));
+  document.querySelectorAll('.typewriter, .reveal-line, .reveal-right, .reveal-left, .curtain-wrapper, .fade-in, .fancy-image, .tl-item, .zoom-image').forEach(el => observer.observe(el));
