@@ -209,3 +209,7 @@ __marimo__/
 
 #MAC shit
 .DS_Store
+
+#test files
+invite/templates/info.html
+invite/templates/*test.html
