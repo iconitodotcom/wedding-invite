@@ -61,11 +61,33 @@
 <!-- WARNINGS options -->
 {% include "warnings.html" %}
 
+<!-- IMAGE -->
+<section>
+  <div class="text-center">
+    <div class="curtain-wrapper mx-auto">
+      <img 
+        src="{{ MEDIA_URL }}/img/cj_warnings.jpg" 
+        class="img-fluid"
+        alt="sample image"
+      >
+      <div class="curtain"></div>
+    </div>
+  </div>
+</section>
 
-<!-- FOOTER -->
-<footer class="py-4 text-center">
-    <p class="mb-0">With love 🤎 Julio & Claudia</p>
-    <p class="mb-0">www.iconito.io</p>
+<!-- THANKS options -->
+{% include "thanks.html" %}
+
+<footer class="p-2 text-center">
+    <div class="row">
+        <div class="col"> Claudia &amp; Julio </div>
+        <div class="col"> 11 . 14 . 2025 </div>
+        <div class="col">
+          <a href="https://www.iconito.io/" target="_blank" style="color: #c9a876; text-decoration: none;">
+            iconito.io
+          </a>
+        </div>
+    </div>
 </footer>
 
 {% endblock %}
