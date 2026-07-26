@@ -1,0 +1,74 @@
+.hero-new {
+    min-height: 840px;
+    background-color: #132510;
+    width: 100%;
+    padding: 2rem 0;
+}
+.phone-screen {
+    height: 100%;
+    overflow: hidden;
+}
+.phone-shell{
+    height: 90vh;
+}
+.phone-image {
+    height: 90vh;
+    position: absolute;
+    inset: 0;
+    background-image: var(--hero-img);
+    background-size: cover;
+    background-position: center;
+    /* transform: scale(1.07); */
+}
+.phone-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.48) 40%, rgba(0,0,0,0.75) 100%);
+}
+.phone-copy {
+    position: absolute;
+    inset: 0;
+    padding: 1.8rem 1.6rem;
+}
+.hero-names p {
+    margin: 0;
+    line-height: 1;
+}
+.hero-names .display-4 {
+    font-size: clamp(2.4rem, 6vw, 3.2rem);
+}
+.hero-names .display-5 {
+    font-size: 2.4rem;
+    margin: 0.4rem 0;
+}
+.btn-rustic {
+    background-color: #6b705c;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.18rem;
+    border-radius: 12px;
+}
+.btn-rustic:hover {
+    background-color: #8d6e63;
+}
+.phone-notch {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    width: 120px;
+    height: 6px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 999px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+}
+@media (max-width: 420px) {
+    .hero-new {
+        min-height: auto;
+        padding: 1.5rem 0;
+    }
+    .phone-shell {
+        height: calc(80vw * 2.01);
+    }
+}

@@ -27,6 +27,10 @@ body {
     background-color: var(--weading-bg);
     color: var(--rustic-dark);
 }
+.app {
+  width: 100%;
+  max-width: 414px;   /* pick your phone width */
+}
 .ivory-txt
 {
     color: var(--ivory);
@@ -151,16 +155,18 @@ footer {
      /* left: 3vw;  */
 }
 #txt-pannel{ 
-    width: 95%;
-    /* min-width: 80vw;
-    left: 8vw; */
-    top: 37vh;
+    width: 100%;
+    font-size: 3rem;
+    top: 20vh;
 }
 #date-pannel
 {
-    /* width: 100vw; */
-    /* top: 95vh; */
-    /*left:34vw;*/
+    width: 100%;
+    bottom: 10vh;
+    font-size: 2rem;
+}
+#music-btn-icon{
+    font-size: 2rem;
 }
 #music-btn{
     background-color: var(--weading-bg);
@@ -333,3 +339,26 @@ footer {
       transform: scale(1.12);
     }
 }
+
+  /* Bootstrap's shadow-md utility doesn't exist by default, so we
+     define the "on desktop" shadow ourselves and gate it the Bootstrap way */
+  @media (min-width: 768px){
+    .wi-invite{ padding: 60px 0; }
+    .shadow-md{
+      box-shadow:
+        0 0 0 1px rgba(205,161,90,0.15),
+        0 40px 80px -20px rgba(0,0,0,0.7) !important;
+    }
+    .wi-card{ 
+        width: 390px;
+        max-width: 100%;
+        /* border: 8px solid #10190f; */
+        overflow: hidden;
+    }
+    .phone-image { position:relative !important; }
+    #txt-pannel { 
+        /* font-size: 3rem; */
+        width: 380px;
+     }
+    #date-pannel { width: 380px; }
+  }
