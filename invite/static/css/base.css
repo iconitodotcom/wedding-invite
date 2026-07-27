@@ -28,7 +28,10 @@ body {
     color: var(--rustic-dark);
 }
 .fs-head{
-    font-size: 3rem;
+    font-size: 2rem;
+}
+.fs-subhead{
+    font-size: 1.5rem;
 }
 .app {
   width: 100%;
@@ -165,7 +168,7 @@ footer {
 #date-pannel
 {
     width: 100%;
-    bottom: 10vh;
+    bottom: 9vh;
     font-size: 2rem;
 }
 #music-btn-icon{
@@ -231,7 +234,7 @@ footer {
 .unit-value.tick 
 {
     transform: scale(1.18);
-    color: var(--rustic-accent);
+    color: var(--golden);
 }
 
 .unit-label {
@@ -342,25 +345,26 @@ footer {
       transform: scale(1.12);
     }
 }
-
-  /* Bootstrap's shadow-md utility doesn't exist by default, so we
-     define the "on desktop" shadow ourselves and gate it the Bootstrap way */
-  @media (min-width: 768px){
-    .wi-invite{ padding: 60px 0; }
-    .shadow-md{
-      box-shadow:
-        0 0 0 1px rgba(205,161,90,0.15),
-        0 40px 80px -20px rgba(0,0,0,0.7) !important;
-    }
-    .wi-card{ 
-        width: 390px;
-        max-width: 100%;
-        overflow: hidden;
-    }
-    .phone-image { position:relative !important; }
-    #txt-pannel { 
-        /* font-size: 3rem; */
-        width: 380px;
-     }
-    #date-pannel { width: 380px; }
-  }
+.wi-card{
+    overflow: hidden;
+}
+/* Bootstrap's shadow-md utility doesn't exist by default, so we
+ define the "on desktop" shadow ourselves and gate it the Bootstrap way */
+@media (min-width: 768px){
+.wi-invite{ padding: 60px 0; }
+.shadow-md{
+  box-shadow:
+    0 0 0 1px rgba(205,161,90,0.15),
+    0 40px 80px -20px rgba(0,0,0,0.7) !important;
+}
+.wi-card{ 
+    width: 390px;
+    max-width: 100%;
+}
+.phone-image { position:relative !important; }
+#txt-pannel { 
+    /* font-size: 3rem; */
+    width: 380px;
+ }
+#date-pannel { width: 380px; }
+}
