@@ -21,11 +21,12 @@
     --right-pos: 96%;
 }
 
-body {
+html, body {
     font-family: 'Georgia', serif;
     /*background-color: var(--rustic-bg);*/
     background-color: var(--weading-bg);
     color: var(--rustic-dark);
+    max-width: 100vw;
 }
 .fs-head{
     font-size: 2rem;
