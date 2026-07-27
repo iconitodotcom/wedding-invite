@@ -27,6 +27,9 @@ body {
     background-color: var(--weading-bg);
     color: var(--rustic-dark);
 }
+.fs-head{
+    font-size: 3rem;
+}
 .app {
   width: 100%;
   max-width: 414px;   /* pick your phone width */
@@ -352,7 +355,6 @@ footer {
     .wi-card{ 
         width: 390px;
         max-width: 100%;
-        /* border: 8px solid #10190f; */
         overflow: hidden;
     }
     .phone-image { position:relative !important; }
