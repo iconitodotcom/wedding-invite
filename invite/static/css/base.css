@@ -22,11 +22,22 @@
 }
 
 html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
     font-family: 'Georgia', serif;
-    /*background-color: var(--rustic-bg);*/
     background-color: var(--weading-bg);
     color: var(--rustic-dark);
-    width: 100vw;
+    /* width: 100vw; */
+    
+}
+* {
+    box-sizing: border-box;
+}
+img, sgv {
+    max-width: 100%;
+    display: block;
 }
 .fs-head{
     font-size: 2rem;
@@ -46,14 +57,27 @@ html, body {
 {
     color: var(--golden);
 }
+.bg-green
+{
+    background-color: var(--weading-bg);
+}
 .bg-ivory
 {
     background-color: var(--ivory);
+}
+.sobre{
+    max-width: 85%;
+    margin: auto;
+    height: auto;
 }
 
 .height-80
 {
     height: 80svh !important; /* small  — locks to viewport WITH toolbars visible (smallest) */
+}
+.height-95
+{
+    height: 95svh !important; /* small  — locks to viewport WITH toolbars visible (smallest) */
 }
 
 .section-title {
@@ -86,11 +110,12 @@ footer {
 
   /* Panels */
 .panel {
-    min-width: 25vw;
+    min-width: 0;
+    width: 100%;
     min-height: 75svh; /* small  — locks to viewport WITH toolbars visible (smallest) */
     flex: 1;
     background-image: var(--hero-img);
-    background-size: var(--panel-size);
+    background-size: cover;
     background-repeat: no-repeat;
     animation: slideANDfadeIn 2s ease-out forwards;
   }
@@ -352,20 +377,23 @@ footer {
 /* Bootstrap's shadow-md utility doesn't exist by default, so we
  define the "on desktop" shadow ourselves and gate it the Bootstrap way */
 @media (min-width: 768px){
-.wi-invite{ padding: 60px 0; }
-.shadow-md{
-  box-shadow:
-    0 0 0 1px rgba(205,161,90,0.15),
-    0 40px 80px -20px rgba(0,0,0,0.7) !important;
-}
-.wi-card{ 
-    width: 390px;
-    max-width: 100%;
-}
-.phone-image { position:relative !important; }
-#txt-pannel { 
-    /* font-size: 3rem; */
-    width: 380px;
- }
-#date-pannel { width: 380px; }
-}
+    .wi-invite{ padding: 60px 0; }
+    .shadow-md{
+      box-shadow:
+        0 0 0 1px rgba(205,161,90,0.15),
+        0 40px 80px -20px rgba(0,0,0,0.7) !important;
+    }
+    .wi-card{ 
+        width: 390px;
+        max-width: 100%;
+    }
+    .phone-shell {
+        height: 95vh;
+    }
+    .phone-image { position:relative !important; }
+    #txt-pannel { 
+        /* font-size: 3rem; */
+        width: 380px;
+     }
+    #date-pannel { width: 380px; }
+    }

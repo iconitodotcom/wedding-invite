@@ -9,16 +9,21 @@
     overflow: hidden;
 }
 .phone-shell{
-    height: 90vh;
+    /* height: 90vh; */
 }
 .phone-image {
-    height: 90vh;
+    /* height: 90vh; */
     position: absolute;
     inset: 0;
     background-image: var(--hero-img);
     background-size: cover;
     background-position: center;
     /* transform: scale(1.07); */
+    /* Animation */
+    filter: blur(22px) brightness(0.52) saturate(0.7);
+    opacity: 0;
+    transform: scale(1.12);
+    animation: phoneImageReveal 1.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .phone-gradient {
     position: absolute;
@@ -70,5 +75,22 @@
     }
     .phone-shell {
         height: calc(80vw * 2.01);
+    }
+}
+@keyframes phoneImageReveal {
+    0%{
+        opacity: 0;
+        filter: blur(22px) brightness(0.52) saturate(0.7);
+        transform: scale(1.12);
+    }
+    35%{
+        opacity: 0.45;
+        filter: blur(12px) brightness(0.7) saturate(0.9);
+        transform: scale(1.08);
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0) brightness(1) saturate(1.05);
+        transform: scale(1);
     }
 }

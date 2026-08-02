@@ -9,6 +9,10 @@ from flask import render_template, Blueprint, send_from_directory
 core = Blueprint('core',__name__)
 
 @core.route('/')
+def sobre():
+    return render_template('sobre.html')
+
+@core.route('/candj')
 def index():
     return render_template('index.html')
 

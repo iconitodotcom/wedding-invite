@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Claudia & Julio – Wedding</title>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-    <meta name="viewport" content="width=375, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 viewport-fit=cover">
+
 
     <meta property="og:title" content="Julio & Claudia Wedding">
     <meta property="og:description" content="Join us to celebrate our wedding day">
@@ -43,6 +43,10 @@
         }
     </style>
 
+        <audio id="bg-music" loop>
+            <source src="{{ MEDIA_URL }}/mp3/c&j.mp3" type="audio/mpeg">
+        </audio>
+
         {% block content %}
         {% endblock %}
         
@@ -51,5 +55,6 @@
     <script src="{{ url_for('static', filename='js/countdown.js') }}"></script>
     <script src="{{ url_for('static', filename='js/music.js') }}"></script>
     <script src="{{ url_for('static', filename='js/scrollAnimation.js') }}"></script>
+
 </body>
 </html>
