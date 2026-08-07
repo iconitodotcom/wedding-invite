@@ -9,11 +9,11 @@
     overflow: hidden;
 }
 .phone-shell{
-    /* height: 90vh; */
+    height: 90vh;
 }
 .phone-image {
     /* height: 90vh; */
-    position: absolute;
+    /* position: absolute; */
     inset: 0;
     background-image: var(--hero-img);
     background-size: cover;
