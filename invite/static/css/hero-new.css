@@ -74,7 +74,7 @@
         padding: 1.5rem 0;
     }
     .phone-shell {
-        height: calc(80vw * 2.01);
+        /* height: calc(80vw * 2.01); */
     }
 }
 @keyframes phoneImageReveal {

@@ -22,10 +22,10 @@
 }
 
 html, body {
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
-    overflow-x: hidden;
-    max-width: 100%;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
     font-family: 'Georgia', serif;
     background-color: var(--weading-bg);
     color: var(--rustic-dark);
@@ -372,7 +372,7 @@ footer {
     }
 }
 .wi-card{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 /* Bootstrap's shadow-md utility doesn't exist by default, so we
  define the "on desktop" shadow ourselves and gate it the Bootstrap way */
