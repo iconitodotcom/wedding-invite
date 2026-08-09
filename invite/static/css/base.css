@@ -392,8 +392,8 @@ footer {
         0 40px 80px -20px rgba(0,0,0,0.7) !important;
     }
     .wi-card{ 
-        width: 100%;
-        max-width: 100%;
+        width: 390px;
+        /* max-width: 100%; */
     }
     .phone-shell {
         height: 95vh;
