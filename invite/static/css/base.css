@@ -24,13 +24,21 @@
 html, body {
     margin: 0 !important;
     padding: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     overflow-x: hidden !important;
-    max-width: 100% !important;
+    overflow-y: auto;
     font-family: 'Georgia', serif;
     background-color: var(--weading-bg);
     color: var(--rustic-dark);
-    /* width: 100vw; */
-    
+    box-sizing: border-box;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
 }
 * {
     box-sizing: border-box;
@@ -190,19 +198,16 @@ footer {
     width: 100%;
     font-size: 3rem;
     top: 20vh;
+    box-sizing: border-box;
 }
 #date-pannel
 {
     width: 100%;
     bottom: 9vh;
     font-size: 2rem;
+    box-sizing: border-box;
 }
-#music-btn-icon{
-    font-size: 2rem;
-}
-#music-btn{
-    background-color: var(--weading-bg);
-}
+
 .cj-seal{
     font-family: "Imperial Script", cursive;
     font-weight: 400;
@@ -372,7 +377,10 @@ footer {
     }
 }
 .wi-card{
-    /* overflow: hidden; */
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 /* Bootstrap's shadow-md utility doesn't exist by default, so we
  define the "on desktop" shadow ourselves and gate it the Bootstrap way */
@@ -384,16 +392,11 @@ footer {
         0 40px 80px -20px rgba(0,0,0,0.7) !important;
     }
     .wi-card{ 
-        width: 390px;
+        width: 100%;
         max-width: 100%;
     }
     .phone-shell {
         height: 95vh;
     }
     .phone-image { position:relative !important; }
-    #txt-pannel { 
-        /* font-size: 3rem; */
-        width: 380px;
-     }
-    #date-pannel { width: 380px; }
-    }
+}

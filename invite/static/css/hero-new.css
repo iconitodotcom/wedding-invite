@@ -9,17 +9,15 @@
     overflow: hidden;
 }
 .phone-shell{
+    position: relative;
     height: 90vh;
 }
 .phone-image {
-    /* height: 90vh; */
-    /* position: absolute; */
+    position: absolute;
     inset: 0;
     background-image: var(--hero-img);
     background-size: cover;
     background-position: center;
-    /* transform: scale(1.07); */
-    /* Animation */
     filter: blur(22px) brightness(0.52) saturate(0.7);
     opacity: 0;
     transform: scale(1.12);
@@ -67,6 +65,13 @@
     border-radius: 999px;
     transform: translateX(-50%);
     box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+}
+#music-btn-icon{
+    font-size: 2rem;
+}
+#music-btn{
+    background-color: var(--weading-bg);
+    animation: phoneImageReveal 1.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 @media (max-width: 420px) {
     .hero-new {
